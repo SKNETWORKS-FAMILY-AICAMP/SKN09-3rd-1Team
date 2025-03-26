@@ -30,7 +30,7 @@
 
 ### 팀원 소개
 
-| [@김하늘](https://github.com/nini12091)                      | [@박주은](https://github.com/pprain1999)                       | [@박유진](https://github.com/YUJINDL01)                       | [@유지은](https://github.com/yujitaeng)                       |
+| [@김하늘](https://github.com/nini12091)                      | [@박유진](https://github.com/YUJINDL01)                       |  [@박주은](https://github.com/pprain1999)                       | [@유지은](https://github.com/yujitaeng)                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | <img src="image/jitaeng.png" width="200" height="200">         | <img src="image/gwangwoon.png" width="200" height="200">            | <img src="image/yoonjae.png" width="200" height="200">             |  ![yujitaeng](https://github.com/user-attachments/assets/7fdacbe3-b568-4c42-8758-d189ec522bc3)  |
 
