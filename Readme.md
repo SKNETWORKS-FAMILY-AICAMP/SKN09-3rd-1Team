@@ -74,15 +74,16 @@
 
 | 카테고리 | 기술 스택 |
 |----------|-------------------------------------------|
-| **협업 및 문서화** | ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white) |
-| **커뮤니케이션 & 메신저** | ![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white) |
-| **형상 관리** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white) |
-| **프로그래밍 언어** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white) |
+| **LLM 모델** | ![OpenChat](https://img.shields.io/badge/OpenChat-F4A300?style=for-the-badge&logo=OpenAI&logoColor=white) ![KoGPT2](https://img.shields.io/badge/KoGPT2-4C7FEF?style=for-the-badge&logo=Kakao&logoColor=white) ![Gemma](https://img.shields.io/badge/Gemma-1F99F2?style=for-the-badge&logo=HuggingFace&logoColor=white) |
+| **백엔드** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-005F73?style=for-the-badge&logo=LangChain&logoColor=white) |
 | **데이터베이스** | ![FAISS](https://img.shields.io/badge/FAISS-009688?style=for-the-badge&logo=FAISS&logoColor=white) |
-| **AI & 머신러닝** | ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=OpenAI&logoColor=white) ![QLoRA](https://img.shields.io/badge/QLoRA-FF4500?style=for-the-badge&logo=HuggingFace&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFCC00?style=for-the-badge&logo=HuggingFace&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-005F73?style=for-the-badge&logo=LangChain&logoColor=white) ![RAG](https://img.shields.io/badge/RAG-008080?style=for-the-badge&logo=RAG&logoColor=white) |
-| **검색 및 벡터 DB** | ![FAISS](https://img.shields.io/badge/FAISS-009688?style=for-the-badge&logo=FAISS&logoColor=white) |
-| **프론트엔드 & UI** | ![Gradio](https://img.shields.io/badge/Gradio-008000?style=for-the-badge&logo=Gradio&logoColor=white) |
-| **배포 환경** | ![RunPod](https://img.shields.io/badge/RunPod-FF4500?style=for-the-badge&logo=RunPod&logoColor=white) |
+| **임베딩** | ![OpenAI Embeddings](https://img.shields.io/badge/OpenAI%20Embeddings-8C9E90?style=for-the-badge&logo=OpenAI&logoColor=white) |
+| **클라우드 환경** | ![Runpod](https://img.shields.io/badge/RunPod-FF4500?style=for-the-badge&logo=RunPod&logoColor=white) |
+| **딥러닝 프레임워크** | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white) ![Hugging Face Transformers](https://img.shields.io/badge/Hugging%20Face%20Transformers-FFCC00?style=for-the-badge&logo=HuggingFace&logoColor=white) ![LoRA](https://img.shields.io/badge/LoRA-FF4500?style=for-the-badge&logo=HuggingFace&logoColor=white) |
+| **협업 및 문서화** | ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white) |
+| **UI & 대시보드** | ![Gradio](https://img.shields.io/badge/Gradio-008000?style=for-the-badge&logo=Gradio&logoColor=white) |
+| **형상 관리** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white) |
+
 
 <br>
 
