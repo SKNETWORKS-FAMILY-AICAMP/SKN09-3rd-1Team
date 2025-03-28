@@ -106,8 +106,9 @@
 ----
 
 # 4️⃣ **WBS**
+프로젝트 기간: 2025-03-18 ~ 2025-03-31
+![스크린샷 2025-03-28 172115](https://github.com/user-attachments/assets/38893b7d-fcdf-4a7e-b4ed-ebbcec791a12)
 
-![image (2)](https://github.com/user-attachments/assets/536ced4d-471e-4691-a8f8-13cbf73cc2b5)
 
 
 <br>
