@@ -31,7 +31,7 @@
 
 | [@김하늘](https://github.com/nini12091)                      | [@박유진](https://github.com/YUJINDL01)                       |  [@박주은](https://github.com/pprain1999)                       | [@유지은](https://github.com/yujitaeng)                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| <img src="image/jitaeng.png" width="200" height="200">         | <img src="image/gwangwoon.png" width="200" height="200">            | <img src="image/yoonjae.png" width="200" height="200">             |  ![yujitaeng](https://github.com/user-attachments/assets/7fdacbe3-b568-4c42-8758-d189ec522bc3)  |
+| <img src="image/jitaeng.png" width="200" height="200">         | <img src="https://github.com/user-attachments/assets/c8ce1260-d6ca-4659-89c3-5d9f06847812" width="200" height="200" />| <img src="image/yoonjae.png" width="200" height="200">             |  ![yujitaeng](https://github.com/user-attachments/assets/7fdacbe3-b568-4c42-8758-d189ec522bc3)  |
 
 
 
@@ -39,10 +39,10 @@
 
 ----
 # 2️⃣ **프로젝트 개요**
-- **프로젝트 명**:  "___"
+- **프로젝트 명**:  "lawquick"
 - **프로젝트 소개**:
     
-    " ___"는 이혼과 양육권 문제에 직면한 사람들이 법적 절차를 이해하고, 적절한 대응 전략을 수립할 수 있도록 돕는 **AI 기반 법률 상담 서비스**입니다. 이 서비스는 이혼 절차, 재산 분할, 양육권 및 양육비 청구 등 법적 문제를 다루며, AI는 사용자의 상황을 분석하여 맞춤형 법률 조언, 법적 대응 전략을 제시합니다. 또한, 이혼 소송과 양육권 분쟁에 관한 다양한 판례와 법률을 기반으로 사용자가 이해하기 쉬운 방식으로 정보를 제공합니다.
+    "lawquick"는 이혼과 양육권 문제에 직면한 사람들이 법적 절차를 이해하고, 적절한 대응 전략을 수립할 수 있도록 돕는 **AI 기반 법률 상담 서비스**입니다. 이 서비스는 이혼 절차, 재산 분할, 양육권 및 양육비 청구 등 법적 문제를 다루며, AI는 사용자의 상황을 분석하여 맞춤형 법률 조언, 법적 대응 전략을 제시합니다. 또한, 이혼 소송과 양육권 분쟁에 관한 다양한 판례와 법률을 기반으로 사용자가 이해하기 쉬운 방식으로 정보를 제공합니다.
     
 - **프로젝트 필요성(배경)**:
     
@@ -151,6 +151,114 @@
 
 ### 5. Fine-tuning
 <!-- 기입 -->
+1. 판례/법률 기반 질의응답
+    a. 구성
+    
+    | 항목 | 설명 |
+    | --- | --- |
+    | instruction | 사용자의 질문 또는 요청 |
+    | input | 사용자의 질문을 바탕으로 검색된 관련 정보 (벡터 DB 결과) + 사용자 정보 |
+    | output | instruction 과 input 을 바탕으로 생성된 모델의 최종 답변 |
+    - 총 900개의 데이터쌍
+    
+    b. 생성방법
+    
+    - input-사용자 정보 생성
+    
+    ```python
+    def generate_random_profiles(n=300):
+        marital_statuses = ["기혼", "이혼", "별거", "사실혼"]
+        divorce_stages = ["이혼 고려 중", "이혼 준비 중", "이혼 진행 중", "이미 이혼함"]
+        property_ranges = ["1천만 원 미만", "1천만~5천만 원", "5천만~1억 원", "1억~5억 원", "5억 이상"]
+        abuse_history = ["없음", "있음"]
+    
+        def generate_children():
+            if random.random() < 0.2:
+                return "비공개"
+            num_children = random.randint(0, 5)
+            if num_children == 0:
+                return "없음"
+            ages = sorted(random.sample(range(0, 41), num_children))
+            age_str = ", ".join(f"{age}세" for age in ages)
+            return f"{num_children}명 ({age_str})"
+    
+        profiles = []
+        for _ in range(n):
+            marriage_duration = str(random.randint(0, 50)) + "년" if random.random() > 0.2 else "비공개"
+    
+            profile = {
+                "혼인 상태": random.choice(marital_statuses) if random.random() > 0.2 else "비공개",
+                "혼인 기간": marriage_duration,
+                "이혼 단계": random.choice(divorce_stages) if random.random() > 0.2 else "비공개",
+                "자녀": generate_children(),
+                "재산": random.choice(property_ranges) if random.random() > 0.2 else "비공개",
+                "폭력": random.choice(abuse_history) if random.random() > 0.2 else "비공개"
+            }
+            profiles.append(profile)
+        return profiles
+    ```
+    
+    - instruction 생성
+    
+    ```python
+    question_prompt = PromptTemplate.from_template("""
+    당신은 이혼 전문 AI 상담사에게 조언을 구하고 싶은 일반 사용자입니다. 아래 사용자 상황은 현실에서 마주칠 수 있는 다양한 이혼 사례 중 하나입니다. 이 상황을 바탕으로 **현실적이고 구체적인 법률 상담 질문**을 3개 작성해 주세요.
+    
+    ※ 질문은 사용자가 직접 AI 상담사에게 하는 말투로 작성하며, 다음과 같은 다양한 주제를 포함할 수 있습니다:
+    - 자녀 양육권 분쟁, 양육비 문제
+    - 배우자의 외도, 폭력, 도박, 정신질환 등 이혼 사유
+    - 사실혼, 동거, 재혼, 국제결혼, 동성혼 등 다양한 혼인 형태
+    - 재산 분할, 위자료, 부동산 명의, 퇴직금, 연금, 채무
+    - 이혼 절차, 협의이혼 vs 재판상 이혼
+    - 이혼 후의 생활 안정, 주거권, 연금, 신혼부부 혜택
+    - 법적 보호 제도(가정폭력, 임시 보호, 접근금지 등)
+    - 황혼 이혼, 출산 직후 이혼, 단기간 혼인 후 이혼 등 다양한 이혼 시점과 그에 따른 법적 쟁점
+    
+    [사용자 상황]
+    {profile}
+    
+    [질문]
+    1.
+    2.
+    3.
+    """)
+    ```
+    
+    사용 모델: gpt-3.5-turbo
+    
+    - output 생성
+    
+    ```python
+    structured_prompt = PromptTemplate.from_template("""
+    당신은 가족법 전문 AI 상담사입니다. 아래 사용자 상황과 질문, 그리고 참고 문서를 바탕으로, **법적 근거가 명확하고 구조화된 상담 답변**을 작성해주세요.
+    
+    ※ 다음 사항을 반드시 지켜주세요:
+    - 사용자 정보 중 '비공개'로 표시된 항목은 절대 활용하지 마세요.
+    - 관련 법 조항이나 판례가 존재하지 않는다면 '해당 없음'으로 작성하되, 그 이유를 설명해 주세요.
+    - 조언 항목은 단순한 일반론이 아니라, 사용자의 상황에 맞는 현실적이고 논리적인 설명과 전문적인 판단을 담아 주세요.
+    - 사용자 입장에서 이해하기 쉽도록 핵심을 요약하고 구체적인 행동 제안도 포함해주세요.
+    
+    [사용자 상황]
+    {profile}
+    
+    [질문]
+    {question}
+    
+    [참고 문서 요약]
+    {context}
+    
+    [답변 작성 형식]
+    
+    💬 답변:
+    1️⃣ 관련 법 조항: (관련 조항이 있다면 조문 번호와 함께 간단한 설명 / 없다면 '해당 없음' + 이유 설명)
+    
+    2️⃣ 관련 판례 요약: (실제 존재하는 유사 판례의 번호 및 핵심 판시사항 / 없으면 '해당 없음' + 이유 설명)
+    
+    3️⃣ 사용자 상황에 맞춘 조언: (사용자의 상황을 고려한 법률적 분석, 판단 근거, 구체적 조언과 권장 행동 제시. 필요시 주의사항도 함께 안내)
+    """)
+    ```
+    
+    사용 모델: gpt-3.5-turbo
 
 <br>
 
