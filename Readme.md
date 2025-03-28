@@ -93,6 +93,12 @@
 
 # 3️⃣ **시스템 아키텍쳐**
 
+**시스템 플로우**
+![image (4)](https://github.com/user-attachments/assets/59ce312d-b3fc-4e0a-aa96-b596cc64715b)
+
+
+**시스템 아키텍쳐**
+![image (3)](https://github.com/user-attachments/assets/03d1a3f3-1244-47e2-8fb5-aac3b7c88aa5)
 
 
 <br>
@@ -399,6 +405,24 @@ def split_articles(text):
 
 ----
 # 8️⃣ **모델 선정 이유**
+
+### **사용된 LLM: openchat/openchat-3.5-0106**
+
+**OpenChat 특징**
+
+- C-RLFT 기법을 사용하여 학습되어 명시적인 선호 레이블 없이도 효과적으로 학습할 수 있도록 도움 (파인튜닝에 용이)
+- 적은 매개변수로도 높은 성능을 제공
+
+**법률 데이터셋에 대한 Fine-tuning**이 용이하며, 모델의 **경량화** 덕분에 **빠른 응답 시간**과 **높은 처리 성능**을 제공하는 OpenChat모델을 사용하여 **법률 상담 서비스의 효율성을 극대화하고, 복잡한 법률 문제에 대한 실시간 지원을 기대**
+
+```
+@article{wang2023openchat,
+  title={OpenChat: Advancing Open-source Language Models with Mixed-Quality Data},
+  author={Wang, Guan and Cheng, Sijie and Zhan, Xianyuan and Li, Xiangang and Song, Sen and Liu, Yang},
+  journal={arXiv preprint arXiv:2309.11235},
+  year={2023}
+}
+```
 
 <br>
 
