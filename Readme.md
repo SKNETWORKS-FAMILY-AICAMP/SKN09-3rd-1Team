@@ -1,4 +1,4 @@
-# 👩🏻‍⚖️ SK Networks AI CAMP 9기 - 3rd 1Team: ooo
+# 👩🏻‍⚖️ SK Networks AI CAMP 9기 - 3rd 1Team: lawquick
 - **개발 기간:** 2025.03.18 ~ 2025.03.31
 
 ---
