@@ -248,29 +248,47 @@
 <br>
 
 ----
-# 8️⃣ **모델 선정 이유**
+# 8️⃣ 모델 선정 이유
 
-### **사용된 LLM: openchat/openchat-3.5-0106**
+## 🧠 사용된 LLM: [`openchat/openchat-3.5-0106`](https://huggingface.co/openchat/openchat-3.5-0106)
 
-OpenChat모델을 사용하여 **법률 상담 서비스의 효율성을 극대화하고, 복잡한 법률 문제에 대한 실시간 지원을 기대**
+OpenChat은 법률 상담과 같이 **정형화된 응답**, **근거 중심 추론**, **빠른 응답 시간**이 필요한 작업에 적합한 오픈소스 LLM임.
 
-**OpenChat 특징**
+---
 
-- C-RLFT 기법을 사용하여 학습되어 명시적인 선호 레이블 없이도 효과적으로 학습할 수 있도록 도움 (파인튜닝에 용이)
-- 적은 매개변수로도 높은 성능을 제공
-- 모델의 **경량화** 덕분에 **빠른 응답 시간**과 **높은 처리 성능**을 제공
+## ✅ OpenChat의 특징과 장점
 
+* **C-RLFT 학습 방식**  
+  → 명시적 선호 레이블 없이도 학습 가능 → 파인튜닝에 효율적임
 
-```
-@article{wang2023openchat,
-  title={OpenChat: Advancing Open-source Language Models with Mixed-Quality Data},
-  author={Wang, Guan and Cheng, Sijie and Zhan, Xianyuan and Li, Xiangang and Song, Sen and Liu, Yang},
-  journal={arXiv preprint arXiv:2309.11235},
-  year={2023}
-}
-```
+* **경량화 구조**  
+  → 추론 속도가 빠르고, 적은 자원으로 실행 가능함
 
-<br>
+* **출력 형식 제어 용이**  
+  → 답변 포맷을 일관되게 유지할 수 있어 구조화된 응답에 적합함
+
+* **문맥 반영 성능 우수**  
+  → 검색 기반 문서(RAG)와 결합 시, 문맥을 안정적으로 활용함
+
+* **오픈소스 접근 가능성**  
+  → 커스터마이징 및 배포가 자유로움 (Apache 2.0 라이선스)
+
+---
+
+## 📌 선택 이유 요약
+
+* 정형화된 법률 상담 포맷에 맞는 출력 제어가 쉬움  
+* 추론 속도와 리소스 효율성이 뛰어남  
+* 파인튜닝 및 실시간 응답 시스템 적용에 실용적임
+
+---
+
+## 📚 모델 정보
+
+* **제작자**: Guan Wang et al.  
+* **논문**: [OpenChat: Advancing Open-source Language Models with Mixed-Quality Data](https://arxiv.org/abs/2309.11235)  
+* **라이선스**: Apache 2.0  
+* **모델 페이지**: [HuggingFace 링크](https://huggingface.co/openchat/openchat-3.5-0106)
 
 ----
 
