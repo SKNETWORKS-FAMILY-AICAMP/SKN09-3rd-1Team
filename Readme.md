@@ -119,12 +119,11 @@
 # 3️⃣ **시스템 아키텍쳐**
 
 **✅ 시스템 플로우**
-![시스템플로우](https://github.com/user-attachments/assets/ee51656a-52aa-40d4-bdb2-cd75248111ae)
+![시스템아키텍처](https://github.com/user-attachments/assets/fcbd8bc8-1102-4568-8008-39fc45cf8b51)
 
 
 **✅ 시스템 아키텍쳐**
-![시스템아키텍처](https://github.com/user-attachments/assets/fcbd8bc8-1102-4568-8008-39fc45cf8b51)
-
+![시스템플로우](https://github.com/user-attachments/assets/ee51656a-52aa-40d4-bdb2-cd75248111ae)
 
 <br>
 
