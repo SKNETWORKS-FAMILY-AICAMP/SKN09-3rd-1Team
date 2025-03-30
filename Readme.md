@@ -35,9 +35,7 @@
 
 | [@김하늘](https://github.com/nini12091)                      | [@박유진](https://github.com/YUJINDL01)                       |  [@박주은](https://github.com/pprain1999)                       | [@유지은](https://github.com/yujitaeng)                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| <img src="image/jitaeng.png" width="200" height="200">         | <img src="https://github.com/user-attachments/assets/c8ce1260-d6ca-4659-89c3-5d9f06847812" width="200" height="200" />| <img src="image/yoonjae.png" width="200" height="200">             |  <img src="https://github.com/user-attachments/assets/7fdacbe3-b568-4c42-8758-d189ec522bc3" width="200" height="200" />|
-
-
+| <img src="https://github.com/user-attachments/assets/e7dd2863-b577-4385-a46c-7163efb0bfe4" width="200" height="200">         | <img src="https://github.com/user-attachments/assets/c8ce1260-d6ca-4659-89c3-5d9f06847812" width="200" height="200" />| <img src="image/yoonjae.png" width="200" height="200">             |  <img src="https://github.com/user-attachments/assets/7fdacbe3-b568-4c42-8758-d189ec522bc3" width="200" height="200" />|
 
 <br>
 
