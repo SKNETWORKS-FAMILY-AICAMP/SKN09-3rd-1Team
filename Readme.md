@@ -236,7 +236,8 @@
 ----
 # 7️⃣ **DB 연동 구현 코드**
 
-**➡️ DB 연동 구현 코드(링크)**
+**➡️ DB 연동 구현 코드(링크)** <br>
+**➡️ [fine tuning 모델](https://huggingface.co/skyss/skn-3rd/tree/main)**
 
 ---
 
