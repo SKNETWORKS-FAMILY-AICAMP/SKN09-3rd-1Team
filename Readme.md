@@ -32,7 +32,7 @@
 
 | [@김하늘](https://github.com/nini12091)                      | [@박유진](https://github.com/YUJINDL01)                       |  [@박주은](https://github.com/pprain1999)                       | [@유지은](https://github.com/yujitaeng)                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| <img src="https://github.com/user-attachments/assets/e7dd2863-b577-4385-a46c-7163efb0bfe4" width="200" height="200">         | <img src="https://github.com/user-attachments/assets/c8ce1260-d6ca-4659-89c3-5d9f06847812" width="200" height="200" />| <img src="image/yoonjae.png" width="200" height="200">             |  <img src="https://github.com/user-attachments/assets/7fdacbe3-b568-4c42-8758-d189ec522bc3" width="200" height="200" />|
+| <img src="https://github.com/user-attachments/assets/e7dd2863-b577-4385-a46c-7163efb0bfe4" width="200" height="200">         | <img src="https://github.com/user-attachments/assets/c8ce1260-d6ca-4659-89c3-5d9f06847812" width="200" height="200" />| <img src="https://github.com/user-attachments/assets/c80b5b8d-4a42-4ed1-950f-b0ea5b078f51" width="200" height="200">             |  <img src="https://github.com/user-attachments/assets/7fdacbe3-b568-4c42-8758-d189ec522bc3" width="200" height="200" />|
 
 <br>
 
@@ -511,12 +511,26 @@ OpenChat은 법률 상담과 같이 **정형화된 응답**, **근거 중심 추
 
 <br>
 
+사용자 화면
+![사용자 화면](https://github.com/user-attachments/assets/548a31c0-dfe2-44be-b5bc-80bda8c0d4e2)
+
+질의응답 화면
+![결과 2 화면](https://github.com/user-attachments/assets/53f8786d-aa7b-4110-96cc-cf2d50ac281a)
+![결과 3](https://github.com/user-attachments/assets/74d8da77-18c9-47aa-9764-0f53d4533254)
+![결과 4](https://github.com/user-attachments/assets/8adf79e4-3d05-4f52-b466-74e135a6c806)
+
+질의응답 화면 (파인튜닝된 모델 답변 ver.)
+![결과 1(파인튜닝만)](https://github.com/user-attachments/assets/455e7bb4-24c0-4690-b401-9cb1de9a68a0)
+![결과 2(파인튜닝만)](https://github.com/user-attachments/assets/d47a8ba0-1761-49a4-8a98-0ad77de4d07f)
+![결과 3(파인튜닝만)](https://github.com/user-attachments/assets/64ba7522-8fc0-46e8-a000-4f8adb7a43f9)
+
+
 ----
 
 # ✳️ **한 줄 회고**
 
 - ❤김하늘
-   - <!-- 기입 -->
+   - 초기에는 조문과 조언이 뒤섞이거나 형식이 깨지는 문제가 있어, JSON 데이터를 조항별로 명확히 나누고 표현도 수정해 다시 파인튜닝했습니다. 이후 출력 형식 예시를 프롬프트에 직접 넣어주는 방식으로 바꾸자 응답의 일관성이 크게 좋아졌고, 데이터 구성과 프롬프트 설계가 모델 품질에 얼마나 큰 영향을 미치는지 실감할 수 있었습니다.
 - 💜박유진
    - 파인튜닝 데이터를 직접 생성하면서, **모델이 학습 과정에서 '패턴'을 인식한다는 의미**는 단순한 문장 구조나 표현 방식뿐 아니라, **인풋과 아웃풋 등 필요한 정보가 항상 일정한 방식으로 제공되어야 한다는 것**임을 확실히 깨달을 수 있었습니다.
 - 💙박주은
