@@ -132,7 +132,7 @@ LawQuick은 **RAG(Retrieval-Augmented Generation)** 기반 구조로 설계됨.
 
 ![시스템 플로우](https://github.com/user-attachments/assets/ee51656a-52aa-40d4-bdb2-cd75248111ae)
 
-> 전체 구조 요약:  
+> **전체 구조 요약:**  
 > 사용자 질문 → 문서 검색 → 프롬프트 구성 → 모델 응답 생성
 
 <br>
