@@ -245,8 +245,8 @@ LawQuick은 **RAG(Retrieval-Augmented Generation)** 기반 구조로 설계됨.
 ----
 # 7️⃣ **DB 연동 구현 코드**
 
-**➡️ DB 연동 구현 코드🔗 [Google Drive에서 보기](https://drive.google.com/drive/folders/10jCckp9hGfIuIjyjUmA1QuvJqft6pvbR)** <br>
-**➡️ [fine tuning 모델](https://huggingface.co/skyss/skn-3rd/tree/main)**
+- [**📂 DB 연동 구현 코드 (Google Drive)**](https://drive.google.com/drive/folders/10jCckp9hGfIuIjyjUmA1QuvJqft6pvbR)
+- [**🧠 파인튜닝 모델 (Hugging Face)**](https://huggingface.co/skyss/skn-3rd/tree/main)
 
 ---
 
